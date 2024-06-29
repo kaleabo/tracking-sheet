@@ -166,7 +166,7 @@ export default function Home() {
                 </h2>
                 <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Get started with this powerful tool to streamline your program
-                  management and ensure your team's success.
+                  management and ensure your team{`'`}s success.
                 </p>
               </div>
               <div>
