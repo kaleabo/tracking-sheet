@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
 
     // Store the token with its expiration date
     tokenStore[token] = expirationDate;
-    return Response.json({ authorized: true, token: token, expires: expirationDate.toISOString() }, { status: 200 });
+    return Response.json({ ip_address: userIp, authorized: true, token: token, expires: expirationDate.toISOString() }, { status: 200 });
   } else {
     return Response.json({ authorized: false }, { status: 403 });
   }
