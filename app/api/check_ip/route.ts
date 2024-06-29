@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
   if (authorizedIps.includes(userIp)) {
     // Generate a unique token
     const token = uuidv4();
-    return Response.json({ authorized: true, token: token }, { status: 200 });
+    return Response.json({ ip: userIp, authorized: true, token: token }, { status: 200 });
   } else {
     return Response.json({ authorized: false }, { status: 403 });
   }
