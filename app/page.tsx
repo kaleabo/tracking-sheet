@@ -48,35 +48,35 @@ export default function Home() {
               </Link>
             ))}
           </nav>
-            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="default" size="icon" className="md:hidden">
-                  <MenuIcon className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <SheetHeader>
-                  <SheetTitle className="text-left">Menu</SheetTitle>
-                </SheetHeader>
-                <div className="flex space-y-2 flex-col font-medium mt-4">
-                  {menuBar.map((menu, index) => (
-                    <Link
-                      key={index}
-                      href={menu.href}
-                      className="font-medium hover:underline underline-offset-4"
-                      onClick={() => setIsSheetOpen(false)}
-                    >
-                      {menu.label}
-                    </Link>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+            <SheetTrigger asChild>
+              <Button variant="default" size="icon" className="md:hidden">
+                <MenuIcon className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle className="text-left">Menu</SheetTitle>
+              </SheetHeader>
+              <div className="flex space-y-2 flex-col font-medium mt-4">
+                {menuBar.map((menu, index) => (
+                  <Link
+                    key={index}
+                    href={menu.href}
+                    className="font-medium hover:underline underline-offset-4"
+                    onClick={() => setIsSheetOpen(false)}
+                  >
+                    {menu.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
       <div className="flex flex-col min-h-[calc(100vh_-_theme(spacing.16))]">
-        <header className="bg-primary text-primary-foreground py-6 md:py-12">
+        <header className="bg-primary text-primary-foreground py-6 pb-10 md:pb-16 md:py-12">
           <div className="container flex flex-col items-center text-center space-y-4">
             <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
               Program Completion Tracking Sheet
