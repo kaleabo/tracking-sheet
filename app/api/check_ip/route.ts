@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export async function GET(req: NextRequest) {
   // List of authorized IP addresses
-  const authorizedIps = ["192.168.1.1", "203.0.113.5", "196.191.112.120"];
+  const authorizedIps = ["192.168.1.1", "203.0.113.5", "196.191.112.120ss"];
 
   // Get the user's IP address
   const userIp: any = req.headers.get("X-Forwarded-For") || req.ip;
