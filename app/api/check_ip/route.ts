@@ -23,6 +23,6 @@ export async function GET(req: NextRequest) {
     tokenStore[token] = expirationDate;
     return Response.json({ ip_address: userIp, authorized: true, token: token, expires: expirationDate.toISOString() }, { status: 200 });
   } else {
-    return Response.json({ authorized: false }, { status: 403 });
+    return Response.json({ ip_address: userIp, authorized: false }, { status: 403 });
   }
 }
