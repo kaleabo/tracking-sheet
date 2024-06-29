@@ -8,7 +8,7 @@ const tokenStore: Record<string, Date> = {};
 const TOKEN_LIFETIME = 365 * 24 * 60 * 60 * 1000;
 export async function GET(req: NextRequest) {
   // List of authorized IP addresses
-  const authorizedIps = ["196.191.112.120", "196.191.112.250"];
+  const authorizedIps = ["196.191.112.120", "196.191.112.2503"];
 
   // Get the user's IP address
   const userIp: any = req.headers.get("X-Forwarded-For") || req.ip;
